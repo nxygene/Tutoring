@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginFragment">
+
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@id/login_username"
+        app:layout_constraintRight_toRightOf="@id/login_username"
+        app:layout_constraintTop_toBottomOf="@id/login_username"
+        tools:text="321874786234" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="LOGIN"
+        app:layout_constraintLeft_toLeftOf="@id/login_password"
+        app:layout_constraintRight_toRightOf="@id/login_password"
+        app:layout_constraintTop_toBottomOf="@id/login_password" />
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_facebookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="@string/btn_LoginFacebook"
+        app:layout_constraintLeft_toLeftOf="@id/button_login"
+        app:layout_constraintRight_toRightOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/button_login" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/button_googlePlusLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="@string/btn_LoginGooglePlus"
+        app:layout_constraintLeft_toLeftOf="@id/login_facebookButton"
+        app:layout_constraintRight_toRightOf="@id/login_facebookButton"
+        app:layout_constraintTop_toBottomOf="@id/login_facebookButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

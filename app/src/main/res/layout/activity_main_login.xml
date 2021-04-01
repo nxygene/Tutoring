@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/activity_login_with_backendless"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".MainLogin">
+
+	<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		
+		<TableLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:stretchColumns="*"
+				android:shrinkColumns="*">
+
+			<TableRow
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="4dp"
+					android:gravity="center">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="48dp"
+						android:layout_marginRight="4dp"
+						android:gravity="center_vertical|right"
+						android:text="@string/login_prompt"
+				/>
+
+				<EditText
+						android:id="@+id/identityField"
+						android:layout_width="144dp"
+						android:layout_height="48dp"
+						android:layout_marginLeft="4dp"
+						android:layout_marginRight="4dp"
+						android:gravity="center_vertical"
+						android:inputType="text"
+				/>
+
+				<TextView
+						android:id="@+id/registerLink"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:layout_marginEnd="8dp"
+						android:layout_gravity="center_vertical|left"
+						android:clickable="true"
+						android:linksClickable="false"
+						android:text="@string/register_text"
+						android:textColor="@android:color/holo_blue_light"
+				/>
+
+			</TableRow>
+
+			<TableRow
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="4dp"
+					android:layout_marginTop="4dp"
+					android:gravity="center">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="48dp"
+						android:layout_marginRight="4dp"
+						android:gravity="center_vertical|right"
+						android:text="@string/password_prompt"
+				/>
+
+				<EditText
+						android:id="@+id/passwordField"
+						android:layout_width="144dp"
+						android:layout_height="48dp"
+						android:layout_marginLeft="4dp"
+						android:layout_marginRight="4dp"
+						android:gravity="center_vertical"
+						android:inputType="textPassword"
+				/>
+
+				<TextView
+						android:id="@+id/restoreLink"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:layout_marginEnd="8dp"
+						android:layout_gravity="center_vertical|left"
+						android:clickable="true"
+						android:text="@string/restore_link"
+						android:textColor="@android:color/holo_blue_light"/>
+				/>
+			</TableRow>
+		</TableLayout>
+		
+
+		<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="180dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_gravity="center">
+
+			<CheckBox
+					android:id="@+id/rememberLoginBox"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="10dp"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/remember_login_text"
+			/>
+
+			
+			<Button
+					android:id="@+id/bkndlsLoginButton"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="25dp"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/btn_LoginBackendless"
+			/>
+			
+			<Button
+					android:id="@+id/loginTwitterButton"
+					android:text="@string/btn_LoginTwitter"
+					android:layout_width="match_parent"
+					android:paddingStart="30dp"
+					android:paddingEnd="5dp"
+					android:layout_height="48dp"
+					android:layout_marginTop="25dp"
+					android:layout_gravity="center_horizontal"
+					android:background="@drawable/btn_twitter_bg"
+			/>
+			
+			<com.facebook.login.widget.LoginButton
+					android:id="@+id/button_FacebookLogin"
+					android:text="@string/btn_LoginFacebook"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginTop="25dp"/>
+			
+			<com.google.android.gms.common.SignInButton
+					android:id="@+id/button_googlePlusLogin"
+					android:text="@string/btn_LoginGooglePlus"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginTop="25dp">
+			</com.google.android.gms.common.SignInButton>
+			
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
+        
